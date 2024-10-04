@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import JitsiMeetComponent from "./components/JitsiMeetComponent.js";
+import "../src/index.css";
+import JitsiMeetingComponent from "./components/JitsiMeetingComponent.js";
+import JitsiMeeting2 from "./components/JitsiMeeting2.js";
 
 function App() {
+  const [roomName, setRoomName] = useState("MyMeetingRoom");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="title">Embed Jitsi Meeting</h1>
+      {/* <JitsiMeetComponent /> */}
+      {/* <JitsiMeetingComponent /> */}
+      <JitsiMeeting2 />
     </div>
   );
 }
